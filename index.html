@@ -1,14 +1,30 @@
 <html>
   <head>
-    <title>Quarta experiência de RA usando o AR.js e o A-frame. Marcador .patt e um modelo 3d</title>
+    <title>Quinta experiência de RA usando o AR.js e o A-frame. Marcador Hiro e um vídeo.</title>
      <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
      <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
   </head>
   <body style="margin: 0px; overflow: hidden">
+    <video id="video" src="video.mp4" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline muted style="display: none;"> </video>
     <a-scene vr-mode-ui="enabled: false" embedded arjs="debugUIEnabled: false">
-        <a-assets>
-          <a-asset-item id="modelo" src="star.gltf"></a-asset-item>
-        </a-assets>
+        <a-marker preset="hiro">
+        <a-video src="#video" width="1.7" height="1" rotation="0 -90 0"></a-video>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
+  </body>
+</html>
+
+<!-- <html>
+<html>
+  <head>
+    <title>Quinta experiência de RA usando o AR.js e o A-frame. Marcador .patt e um modelo 3d</title>
+     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+  </head>
+  <body style="margin: 0px; overflow: hidden">
+    <video id="video" src="video.mp4" autoplay loop crossorigin="anonymous" playsinline webkit-playsinline muted style="display: none;"> </video>
+    <a-scene vr-mode-ui="enabled: false" embedded arjs="debugUIEnabled: false">
       
         <a-marker type="pattern" url="pattern-sorriso3.patt">
         <a-entity id="modelo3d"
@@ -76,6 +92,11 @@
         <a-cylinder position="2 0.5 0" material="color: black"></a-cylinder>
         <a-ring position="-2 0.5 0" material="color: yellow"></a-ring>
       </a-marker>
+
+estrela
+        <a-assets>
+          <a-asset-item id="modelo" src="star.gltf"></a-asset-item>
+        </a-assets>
       <a-entity camera></a-entity>
     </a-scene>
   </body>
